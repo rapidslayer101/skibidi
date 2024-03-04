@@ -12,14 +12,14 @@ namespace CMP1903_A1_2324
         // Test method
         public void TestGame()
         {   
-            // Create random object
-            Random random = new Random();
+            // Create a random object
+            var random = new Random();
             
             // Create game object
-            Game game = new Game();
+            var game = new Game();
             
             // Die rolls are between 1 and 6 (inclusive)
-            Die die = new Die();
+            var die = new Die();
             Debug.Assert(die.Roll(random) >= 1 && die.Roll(random) <= 6, "Die roll is not between 1 and 6");
             
             // The total of the three dice rolls is between 3 and 18 (inclusive)

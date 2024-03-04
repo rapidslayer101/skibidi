@@ -12,12 +12,12 @@ namespace CMP1903_A1_2324
         public int RollDice()
         {   
             // Create random object
-            Random random = new Random();
+            var random = new Random();
             
             // Create 3 dice objects
-            Die die1 = new Die();
-            Die die2 = new Die();
-            Die die3 = new Die();
+            var die1 = new Die();
+            var die2 = new Die();
+            var die3 = new Die();
             
             // Roll the dices
             var roll1 = die1.Roll(random);
@@ -30,14 +30,8 @@ namespace CMP1903_A1_2324
             Console.WriteLine("Roll 3: " + roll3);
             
             // Sum all the dice rolls
-            int total = roll1 + roll2 + roll3;
+            var total = roll1 + roll2 + roll3;
             return total;
-        }
-        
-        // write the output of RollDice to the console
-        public void ReportTotal(int total)
-        {
-            Console.WriteLine("The total of the three dice rolls is: " + total);
         }
     }
 }
