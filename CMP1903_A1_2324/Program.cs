@@ -10,32 +10,19 @@ namespace CMP1903_A1_2324
     {
         static void Main(string[] args)
         {
+            /*
+             * Create a Game object and call its methods.
+             * Create a Testing object to verify the output and operation of the other classes.
+             */
+            
             // Creates a game object and calls its methods
-            try
-            {
-                var game = new Game();
-                var total = game.RollDice();
-                
-                // write the output of RollDice to the console
-                Console.WriteLine("The total of the three dice rolls is: " + total);
-            }
-            // Catch exception of the game method
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-            }
+            Game game = new Game();
+            var total = game.RollDice();
+            game.ReportTotal(total);
             
             // Creates a testing object and calls its method
-            try
-            {
-                var test = new Testing();
-                test.TestGame();
-            }
-            // Catch exception of the test method
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-            }
+            Testing test = new Testing();
+            test.TestGame();
         }
     }
 }

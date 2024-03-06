@@ -9,14 +9,19 @@ namespace CMP1903_A1_2324
     internal class Die
 
     {
-    // Die value Property
-    private int dieValue;
+    /*
+     * The Die class should contain one property to hold the current die value,
+     * and one method that rolls the die, returns and integer and takes no parameters.
+     */
 
-    // Roll dice method
+    //Property
+    private int DieValue = 0;
+
+    //Method
     public int Roll(Random random)
     {
-        dieValue = random.Next(1, 7);
-        return dieValue;
+        DieValue = random.Next(1, 7);
+        return DieValue;
     }
 
     }
